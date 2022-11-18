@@ -14,4 +14,10 @@ namespace double_linked_list
         public Node next;
         public Node prev;
     }
+    class DoubleLinkedList
+    {
+        Node START;
+
+        //constructor
+    }
 }
