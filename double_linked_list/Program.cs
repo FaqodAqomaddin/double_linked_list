@@ -153,4 +153,26 @@ namespace double_linked_list
             }
         }
     }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DoubleLinkedList obj = new DoubleLinkedList();
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMenu");
+                    Console.WriteLine("1. Add a record to the list");
+                    Console.WriteLine("2. Delete a record from the list");
+                    Console.WriteLine("3. View all record in the ascending order of roll numbers");
+                    Console.WriteLine("4. View all record in the descending order of roll numbers");
+                    Console.WriteLine("5. Search for a record in the list");
+                    Console.WriteLine("6. Exit\n");
+                    Console.Write("Enter your choice (1-6): ");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                }
+            }
+        }
+    }
 }
