@@ -9,7 +9,7 @@ namespace double_linked_list
          * its succeding and preceeding
          * in term of next and previous */
         public int noMhs;
-        publik string name;
+        public string name;
         //point to the succeding node
         public Node next;
         public Node prev;
