@@ -118,5 +118,21 @@ namespace double_linked_list
             else
                 return false;
         }
+        public void ascending()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecord in the Descending order of" + "Roll number are: \n");
+                Node currentNode;
+                //membawa currentNode ke Node paling belakang
+                currentNode = START;
+                while (currentNode.next != null)
+                {
+                    currentNode = currentNode.next;
+                }
+            }
+        }
     }
 }
