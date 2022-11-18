@@ -19,5 +19,7 @@ namespace double_linked_list
         Node START;
 
         //constructor
+
+        public void addNote()
     }
 }
