@@ -30,7 +30,7 @@ namespace double_linked_list
             nm = Console.ReadLine();
             Node newNode = new Node();
             newNode.noMhs = nim;
-            newNode.name = nm; 
+            newNode.name = nm;
 
             //check if the list empty
             if (START == null || nim <= START.noMhs)
@@ -49,7 +49,7 @@ namespace double_linked_list
             }
             /*if the node is to be inserted at between two Node*/
             Node previous, current;
-            for(current = previous = START;
+            for (current = previous = START;
                 current != null && nim >= current.noMhs;
                 previous = current, current = current.next)
             {
@@ -59,9 +59,9 @@ namespace double_linked_list
                     return;
                 }
             }
-             /* On the execution of the above for loop, prev and
-             * current will point to those nodes
-             * between which the new node is to be inserted*/
+            /* On the execution of the above for loop, prev and
+            * current will point to those nodes
+            * between which the new node is to be inserted*/
             newNode.next = current;
             newNode.prev = previous;
 
@@ -99,7 +99,7 @@ namespace double_linked_list
                 return true;
             }
             //node between two nodes in the list
-            if(current == START)
+            if (current == START)
             {
                 START = START.next;
                 if (START != null)
@@ -119,3 +119,17 @@ namespace double_linked_list
                 return false;
         }
         public void ascending()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecord in the ascending order of" + " Roll number are:\n");
+                Node currentNode;
+                for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.noMhs + currentNode.next.name + "\n");
+            }
+        }
+
+    }
+}
