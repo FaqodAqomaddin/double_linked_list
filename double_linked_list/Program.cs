@@ -171,6 +171,72 @@ namespace double_linked_list
                     Console.WriteLine("6. Exit\n");
                     Console.Write("Enter your choice (1-6): ");
                     char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNote();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is Empty");
+                                    break;
+                                }
+                                Console.Write("\nEnter the roll number of the student" + "Whose record is to be deleted: ");
+                                int rollNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.dellNode(rollNo) == false)
+                                    Console.WriteLine("Record not found");
+                                else
+                                    Console.WriteLine("Record with roll number " + rollNo + "deleted \n");
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.ascending();
+                            }
+                            break;
+                        case '4':
+                            {
+                                obj.descending();
+                            }
+                            break;
+                        case '5':
+                            {
+                                if(obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Node prev, curr;
+                                prev = curr = null;
+                                Console.Write("\nEnter the roll number of the student whose record you want to search: ");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.Search(num, ref prev, ref curr) == false)
+                                    Console.Write("\nRecord not found");
+                                else
+                                {
+                                    Console.WriteLine("\nRecord found");
+                                    Console.WriteLine("\nRoll number: " + curr.noMhs);
+                                    Console.WriteLine("\nname : " + curr.name);
+                                }
+                            }
+                            break;
+                        case '6':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid option");
+                            }
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the values entered");
                 }
             }
         }
